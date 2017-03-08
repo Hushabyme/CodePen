@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.container {
+  margin-top: 30%;
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+
+.arrow {
+  width: 28px;
+  height: 8px;
+  position: absolute;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease infinite;
+}
+
+.arrow:first-child {
+  animation: move 3s 1s ease infinite;
+}
+
+.arrow:nth-child(2) {
+  animation: move 3s 2s ease infinite;
+}
+
+/* 核心思想 */
+/* 利用 skew() 方法制作小箭头 */
+.arrow::before,
+.arrow::after {
+  content: '';
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  background: #fff;
+}
+
+.arrow::before {
+  left: 0;
+  transform: skew(0, 30deg);
+}
+
+.arrow::after {
+  right: 0;
+  transform: skew(0, -30deg);
+}
+
+.text {
+  display: block;
+  margin-top: 75px;
+  margin-left: -20px;
+}
+
+.text {
+  font: 100 14px "微软雅黑";
+  color: #fff;
+  white-space: nowrap;
+  opacity: .1;
+  animation: pulse 1.5s linear alternate infinite;
+}
+
+@keyframes move {
+  25% {
+    opacity: .6;
+  }
+  33% {
+    opacity: .85;
+    transform: translateY(20px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(60px) scale3d(.5, .5, .5);
+  }
+}
+
+/* pulse 的意思是脉冲 */
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
+}
