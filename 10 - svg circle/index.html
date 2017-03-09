@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>svg circle</title>
+  <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+  <svg class="score" width="400" height="400" viewBox="-25 -25 400 400">
+    <circle class="score-empty" cx="175" cy="175" r="175" stroke-width="25" fill="none"></circle>
+    <circle class="js-circle score-circle" cx="175" cy="175" r="175" stroke-dasharray="1100" stroke-width="25" stroke-dashoffset="1100" fill="none" transform="rotate(-90 175 175)"></circle>
+    <text class="js-text score-text" x="50%" y="50%" dx="-25" text-anchor="middle"></text>
+  </svg>
+  <button class="js-button button">Change value</button>
+
+  <script src="js/controller.js"></script>
+</body>
+</html>

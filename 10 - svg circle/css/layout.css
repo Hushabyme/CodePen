@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f7f7f7;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.score-circle {
+  stroke: #1e1935;
+  transition: stroke-dashoffset 1s ease-out;
+}
+
+.score-empty {
+  stroke: #ddd;
+}
+
+.score-text {
+  fill: #1e1935;
+  font: bold 4rem "Poppins", Helvetica, Arial, sans-serif;
+}
+
+.button {
+  margin-top: 2rem;
+  font: bold 1.75rem "Poppins", Helvetica, Arial, sans-serif;
+  padding: 0.5rem 1.5rem;
+  background: transparent;
+  border: 6px solid;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 #1e1935;
+}
