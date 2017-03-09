@@ -1,0 +1,66 @@
+body {
+  background: #333;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.switch {
+  width: 50px;
+  height: 20px;
+  background: #dea28e;
+  border-radius: 20px;
+  padding: 4px;
+  vertical-align: middle;
+  display: inline-block;
+  transition: background .5s .1s ease;
+  cursor: pointer;
+}
+
+.switch::before,
+.switch::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transition: all .8s cubic-bezier(0, .95, .38, .98),
+              background .2s;
+}
+
+.switch::before {
+  background: rgba(255, 255, 255, .1);
+  transform: translate(0, -50%) scale(0);
+}
+
+.switch::after {
+  background: #E0563A;
+  transform: translate(0, -50%);
+}
+
+.switch:active::before {
+  transform: translate(0, -50%) scale(3.5);
+}
+
+input:checked + .switch {
+  background: #C2EBAE;
+}
+
+input:checked + .switch::before {
+  transform: translate(30px, -50%) scale(1);
+}
+
+input:checked + .switch::after {
+  background: #6FB54C;
+  transform: translate(30px, -50%);
+}
+
+input:checked + .switch:active::before {
+  background: rgba(255, 255, 255, .1);
+  transform: translate(100%, -50%) scale(3.5);
+}

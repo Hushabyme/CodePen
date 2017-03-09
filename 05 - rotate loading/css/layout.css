@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  width: 100%;
+  height: 100vh;
+  background-color: #f8f4d5;
+}
+
+
+.container {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  filter: url('#goo');
+  animation: rotate-move 2.6s ease-in-out infinite;
+}
+
+.dot {
+  width: 70px;
+  height: 70px;
+  border-radius: 80%;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.dot {
+  width: 70px;
+  height: 70px;
+  border-radius: 80%;
+  background-color: #000;
+}
+
+.dot-1 {
+  background: #ffe386;
+  animation: dot-1-move 2.6s ease infinite;
+}
+
+.dot-2 {
+  background: #10beae;
+  animation: dot-2-move 2.6s ease infinite;
+}
+
+.dot-3 {
+  background: #f74d75;
+  animation: dot-3-move 2.6s ease infinite;
+}
+
+@keyframes rotate-move {
+  55% {transform: rotate(0)}
+  80% {transform: rotate(360deg)}
+  100% {transform: rotate(360deg)}
+}
+
+@keyframes dot-1-move {
+  20% {transform: scale(1)}
+  45% {transform: translate(16px, 12px) scale(.45)}
+  60% {transform: translate(40px, 40px) scale(.45)}
+  80% {transform: translate(40px, 40px) scale(.45)}
+  100% {transform: translateY(0px) scale(1)}
+}
+
+@keyframes dot-2-move {
+  20% {transform: scale(1)}
+  45% {transform: translate(-16px, 12px) scale(.45)}
+  60% {transform: translate(-40px, 40px) scale(.45)}
+  80% {transform: translate(-40px, 40px) scale(.45)}
+  100% {transform: translateY(0px) scale(1)}
+}
+
+@keyframes dot-3-move {
+  20% {transform: scale(1)}
+  45% {transform: translateY(-18px) scale(.45)}
+  60% {transform: translateY(-40px) scale(.45)}
+  80% {transform: translateY(-40px) scale(.45)}
+  100% {transform: translateY(0px) scale(1)}
+}
+
