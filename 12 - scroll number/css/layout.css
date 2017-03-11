@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  animation: changeColor 8s cubic-bezier(0.85, 0.01, 0.19, 0.99) infinite;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+h1 {
+  text-align: left;
+  display: inline-block;
+  width: auto;
+  margin: auto;
+  font-size: 4em;
+}
+
+.scroll {
+  display: block;
+  height: 1em;
+  overflow: hidden;
+}
+
+.scroll span {
+  display: block;
+  animation: scroll 8s cubic-bezier(0.85, 0.01, 0.19, 0.99) infinite;
+  line-height: 1;
+}
+
+.scroll span:nth-child(1) {
+  color: #4b7296;
+}
+
+.scroll span:nth-child(2) {
+  color: #578bbd;
+}
+
+.scroll span:nth-child(3) {
+  color: #2b97ff;
+}
+
+.scroll span:nth-child(4) {
+  color: #168dff;
+}
+
+.scroll span:nth-child(5) {
+  color: #386b9a;
+}
+
+.scroll span:nth-child(6) {
+  color: #4b7296;
+}
+
+@keyframes scroll {
+  0% {transform: translateY(0);}
+  20% {transform: translateY(-1em);}
+  40% {transform: translateY(-2em);}
+  60% {transform: translateY(-3em);}
+  80% {transform: translateY(-4em);}
+  100% {transform: translateY(-5em);}
+}
+
+@keyframes changeColor {
+  0% {background-color: #A7BED3;}
+  20% {background-color: #C5D7E8;}
+  40% {background-color: #C4E2FF;}
+  60% {background-color: #AFD8FF;}
+  80% {background-color: #93B7D8;}
+  100% {background-color: #A7BED3;}
+}
